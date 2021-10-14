@@ -14,6 +14,8 @@ import com.MARCELO073.CrudClient.exeception.ResourceNotFoundException;
 @ControllerAdvice
 public class ResourceExceptionHandler {
 	
+	//Trata erro quando uma entidade não e encontrada
+	
 	@ExceptionHandler(ResourceNotFoundException.class)
 	public ResponseEntity<StandardError> entityNotFound(ResourceNotFoundException e, HttpServletRequest request) {
 		HttpStatus status = HttpStatus.NOT_FOUND;
